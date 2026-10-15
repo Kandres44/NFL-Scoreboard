@@ -1,55 +1,140 @@
 import "./style.css";
 
+
 function Info() {
+
 
     return (
 
+
         <section className="info">
 
+
             <h1>
-                NFL Scoreboard 🏈
+                🏈 NFL Scoreboard
             </h1>
 
-            <div className="contenido">
+
+
+            <div className="contenido-info">
+
+
 
                 <h2>
-                    Sobre la aplicación
+                    Sobre el proyecto
                 </h2>
+
 
                 <p>
-                    Aplicación creada con React para consultar partidos de la NFL usando una API de ESPN.
+
+                    Esta aplicación permite consultar partidos de la NFL utilizando datos obtenidos desde una API deportiva.
+
                 </p>
 
+
+
+
                 <h2>
-                    Funciones
+                    Funciones principales
                 </h2>
+
+
+
+                <div className="funciones">
+
+
+                    <div>
+                        🏈
+                        <h3>
+                            Partidos
+                        </h3>
+
+                        <p>
+                            Consulta encuentros actuales de la NFL.
+                        </p>
+
+                    </div>
+
+
+
+                    <div>
+                        ⭐
+                        <h3>
+                            Favoritos
+                        </h3>
+
+                        <p>
+                            Guarda tus partidos favoritos usando almacenamiento local.
+                        </p>
+
+                    </div>
+
+
+
+
+                    <div>
+                        🔎
+                        <h3>
+                            Detalles
+                        </h3>
+
+                        <p>
+                            Visualiza información completa de cada partido.
+                        </p>
+
+                    </div>
+
+
+
+                </div>
+
+
+
+
+
+                <h2>
+                    Tecnologías utilizadas
+                </h2>
+
+
 
                 <ul>
 
                     <li>
-                        🏈 Ver partidos
+                        ⚛️ React
                     </li>
 
-                    <li>
-                        ⭐ Guardar favoritos
-                    </li>
 
                     <li>
-                        📊 Consultar información deportiva
+                        🟨 JavaScript
                     </li>
+
+
+                    <li>
+                        🎨 CSS
+                    </li>
+
+
+                    <li>
+                        🌐 API REST ESPN
+                    </li>
+
 
                 </ul>
 
-                <h2>
-                    Tecnologías
-                </h2>
 
-                <p>
-                    React + JavaScript + CSS + API REST
-                </p>
+
             </div>
+
+
+
         </section>
+
+
     )
+
+
 }
+
 
 export default Info;

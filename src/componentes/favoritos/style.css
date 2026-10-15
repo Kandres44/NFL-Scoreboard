@@ -1,28 +1,157 @@
 .favoritos{
-padding:40px 8%;
+
+padding:50px 8%;
+
 }
+
+
 
 .favoritos h1{
+
+
 text-align:center;
-font-size:40px;
-margin-bottom:30px;
+
+
+font-size:45px;
+
+
+margin-bottom:40px;
+
+
 }
+
+
 
 .lista-favoritos{
+
+
 display:grid;
+
+
 grid-template-columns:
+
 repeat(
 auto-fit,
-minmax(300px,1fr)
+minmax(320px,1fr)
 );
 
-gap:25px;
+
+gap:30px;
+
+
 }
 
+
+
 .tarjeta-favorito{
-background:#101c32;
-padding:25px;
-border-radius:15px;
+
+
+background:
+
+linear-gradient(
+145deg,
+#16213a,
+#203b68
+);
+
+
+padding:30px;
+
+
+border-radius:20px;
+
+
 box-shadow:
-0 5px 15px black;
+
+0 10px 25px rgba(0,0,0,.4);
+
+
+transition:.3s;
+
+
+}
+
+
+
+.tarjeta-favorito:hover{
+
+
+transform:translateY(-8px);
+
+
+}
+
+
+
+.tarjeta-favorito h2{
+
+
+margin-bottom:20px;
+
+
+}
+
+
+
+.datos-favorito p{
+
+
+margin:15px 0;
+
+
+color:#ddd;
+
+
+}
+
+
+
+.tarjeta-favorito button{
+
+
+margin-top:20px;
+
+
+padding:12px 20px;
+
+
+border:none;
+
+
+border-radius:10px;
+
+
+background:#e63946;
+
+
+color:white;
+
+
+font-weight:bold;
+
+
+cursor:pointer;
+
+
+}
+
+
+
+.tarjeta-favorito button:hover{
+
+
+background:#c92f3b;
+
+
+}
+
+
+
+.vacio{
+
+
+text-align:center;
+
+width:100%;
+
 }
