@@ -1,0 +1,19 @@
+.inicio {
+height:80vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+}
+
+
+.inicio h1 {
+font-size:55px;
+}
+
+
+.inicio p {
+margin-top:20px;
+color:#b8b8b8;
+}

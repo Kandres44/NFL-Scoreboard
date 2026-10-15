@@ -1,0 +1,16 @@
+.info{
+padding:60px 10%;
+text-align:center;
+}
+
+
+.info h1{
+font-size:45px;
+margin-bottom:20px;
+}
+
+
+.info p{
+margin:15px;
+color:#ccc;
+}

@@ -1,0 +1,16 @@
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 8%;
+background:#050b15;
+}
+
+.links{
+display:flex;
+gap:25px;
+}
+
+.links a:hover{
+color:#00aaff;
+}
