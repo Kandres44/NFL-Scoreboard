@@ -1,9 +1,28 @@
 .favoritos{
-padding:50px;
-text-align:center;
+padding:40px 8%;
 }
 
-
 .favoritos h1{
-font-size:45px;
+text-align:center;
+font-size:40px;
+margin-bottom:30px;
+}
+
+.lista-favoritos{
+display:grid;
+grid-template-columns:
+repeat(
+auto-fit,
+minmax(300px,1fr)
+);
+
+gap:25px;
+}
+
+.tarjeta-favorito{
+background:#101c32;
+padding:25px;
+border-radius:15px;
+box-shadow:
+0 5px 15px black;
 }
