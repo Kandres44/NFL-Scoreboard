@@ -1,96 +1,77 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-
 import "./style.css";
 
 function Partidos() {
 
     const [partidos, setPartidos] = useState([]);
-
     useEffect(() => {
-        fetch(
-            "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard"
-        )
+        const cargarPartidos = async () => {
+            try {
 
-            .then(res => res.json())
-            .then(data => {
-                setPartidos(data.events);
-            })
+                const respuesta = await fetch(
+                    "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard"
+                );
 
+                const datos = await respuesta.json();
+                console.log(datos);
+                setPartidos(datos.events);
+
+            } catch (error) {
+
+                console.log(
+                    "Error cargando partidos:",
+                    error
+                );
+            }
+        }
+        cargarPartidos();
     }, []);
 
     return (
 
-
-        <section className="partidos">
-
+        <div className="partidos">
             <h1>
                 Partidos NFL
             </h1>
-
-            <div className="contenedor-partidos">
-
-
+            <div className="lista-partidos">
                 {
-                    partidos.map((partido) => (
+                    partidos.length > 0 ?
+                        (
+                            partidos.map((partido) => (
+                                <div
+                                    className="tarjeta"
+                                    key={partido.id}
+                                >
+                                    <h2>
+                                        {partido.name}
+                                    </h2>
 
-                        <div
-                            className="tarjeta-partido"
-                            key={partido.id}
-                        >
+                                    <p>
+                                        📅
+                                        {
+                                            new Date(partido.date)
+                                                .toLocaleDateString()
+                                        }
+                                    </p>
 
-                            <h2>
-                                {partido.name}
-                            </h2>
 
-                            <p>
-                                📅
-
-                                {
-                                    new Date(partido.date)
-                                        .toLocaleDateString()
-                                }
-                            </p>
-
-                            <p>
-                                🏟️
-                                {
-                                    partido.competitions[0]
-                                        .venue?.fullName
-                                }
-                            </p>
-
-                            <p>
-                                Estado:
-                                <span>
-                                    {
-                                        partido.status.type.description
-
-                                    }
-                                </span>
-                            </p>
-
-                            <Link
-                                to={`/detalle/${partido.id}`}
-                            >
-                                <button>
-                                    Ver partido
-                                </button>
-                            </Link>
-
-                        </div>
-
-                    ))
-
+                                    <p>
+                                        ⏱️
+                                        {
+                                            partido.status.type.description
+                                        }
+                                    </p>
+                                </div>
+                            ))
+                        )
+                        :
+                        <h2>
+                            Cargando partidos...
+                        </h2>
                 }
-
             </div>
-
-        </section>
-
+        </div>
     )
-
 }
-
 
 export default Partidos;

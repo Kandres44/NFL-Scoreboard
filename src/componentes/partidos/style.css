@@ -1,5 +1,5 @@
 .partidos{
-padding:50px 8%;
+padding:40px;
 }
 
 .partidos h1{
@@ -8,60 +8,31 @@ font-size:45px;
 margin-bottom:40px;
 }
 
-.contenedor-partidos{
+.lista-partidos{
 display:grid;
 grid-template-columns:
 repeat(
 auto-fit,
-minmax(320px,1fr)
+minmax(300px,1fr)
 );
 
-gap:30px;
+gap:25px;
 }
 
-.tarjeta-partido{
-background:
-linear-gradient(
-145deg,#101c35,#162746
-);
-
-
+.tarjeta{
+background:#111d33;
 padding:25px;
-border-radius:20px;
+border-radius:15px;
 box-shadow:
-0 10px 25px rgba(0,0,0,.4);
-transition:.3s;
+0 10px 20px rgba(0,0,0,.4);
 }
 
-.tarjeta-partido:hover{
-transform:translateY(-10px);
-}
-
-.tarjeta-partido h2{
+.tarjeta h2{
 font-size:22px;
-margin-bottom:20px;
+margin-bottom:15px;
 }
 
-.tarjeta-partido p{
-margin:12px 0;
-color:#ddd;
-}
-
-.tarjeta-partido span{
-color:#00bfff;
-margin-left:10px;
-}
-
-.tarjeta-partido button{
-margin-top:20px;
-padding:12px 25px;
-border:none;
-border-radius:10px;
-background:#0066ff;
-color:white;
-font-weight:bold;
-}
-
-.tarjeta-partido button:hover{
-background:#004dcc;
+.tarjeta p{
+margin:10px 0;
+color:#ccc;
 }
