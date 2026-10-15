@@ -1,29 +1,35 @@
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, ScrollView } from 'react-native';
 
 export default function Inicio() {
   return (
-    <View style={styles.container}>
+    <ScrollView contentContainerStyle={styles.container}>
       <Text style={styles.titulo}>🏈 NFL Scoreboard</Text>
-      <Text style={styles.subtitulo}>Inicio</Text>
-    </View>
+      <Text style={styles.subtitulo}>
+        Consulta partidos, resultados y equipos de la NFL.
+      </Text>
+    </ScrollView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    flexGrow: 1,
     backgroundColor: '#000',
     alignItems: 'center',
     justifyContent: 'center',
+    padding: 30,
   },
   titulo: {
-    fontSize: 28,
+    fontSize: 32,
     fontWeight: 'bold',
     color: '#fff',
-    marginBottom: 10,
+    marginBottom: 15,
+    textAlign: 'center',
   },
   subtitulo: {
-    fontSize: 18,
+    fontSize: 16,
     color: '#aaa',
+    textAlign: 'center',
+    lineHeight: 24,
   },
 });
